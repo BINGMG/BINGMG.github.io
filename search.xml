@@ -1,21 +1,382 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2021/02/24/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+    <title>Vimium_快捷键</title>
+    <url>/2021/02/25/Vimium-%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
+    <content><![CDATA[<h3 id="浏览当前页面："><a href="#浏览当前页面：" class="headerlink" title="浏览当前页面："></a>浏览当前页面：</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">j,&lt;c-e&gt;:页面向下滑</span><br><span class="line">k,&lt;c-y&gt;:页面向上滑</span><br><span class="line">gg:页面顶端</span><br><span class="line">G:页面底端</span><br><span class="line">d:向下滑整个页面</span><br><span class="line">u:向上滑整个页面</span><br><span class="line">h:向左滑</span><br><span class="line">l:向右滑</span><br><span class="line">r:刷新本页面</span><br><span class="line">yy:将本页面URL复制到剪切板</span><br><span class="line">p:在当前页面打开剪切板的URL</span><br><span class="line">P:在新页面打开剪切板的URL</span><br><span class="line">i:进入插入模式，按ESC退回命令模式</span><br><span class="line">v:进入视觉模式</span><br><span class="line">gi:进入当前展示页面的第一个输入框，中间可以加上数字，如g2i表示当前页面的第二个输入框</span><br><span class="line">f:显示当前展示页面的所有标签并在当前页面打开</span><br><span class="line">F:显示当前展示页面的所有标签并在新页面打开</span><br><span class="line">gf:显示下一帧，边框会变黄，不知道怎么用</span><br><span class="line">gF:显示最主要的帧</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h3 id="导航到新页面"><a href="#导航到新页面" class="headerlink" title="导航到新页面"></a>导航到新页面</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">o:在当前页面打开书签或历史记录的URL</span><br><span class="line">O:在新页面打开书签或历史记录的URL</span><br><span class="line">b:在当前页面打开书签上的URL</span><br><span class="line">B:在新页面打开书签上的URL</span><br><span class="line">T:显示浏览器打开的所有URL</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h3 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;:进入查找模式</span><br><span class="line">n:向下查找</span><br><span class="line">N:向上查找</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h3 id="浏览历史"><a href="#浏览历史" class="headerlink" title="浏览历史"></a>浏览历史</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">H:页面前进</span><br><span class="line">L:页面后退</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h3 id="操作标签"><a href="#操作标签" class="headerlink" title="操作标签"></a>操作标签</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">t:打开一个空白的新标签</span><br><span class="line">J,gT:进入左边一个标签</span><br><span class="line">K,gt:进入右边一个标签</span><br><span class="line">^:转到上一个打开的标签</span><br><span class="line">g0:转到第一个标签</span><br><span class="line">g$:转到最后一个标签</span><br><span class="line">yt:复制当前标签</span><br><span class="line">&lt;a-p&gt;:将当前页面的选项卡放置到最前面，并缩小，再按一次会放大</span><br><span class="line">&lt;a-m&gt;:关闭或打开本选项卡的声音</span><br><span class="line">x:关闭当前页面</span><br><span class="line">X:打开刚才关闭的页面</span><br></pre></td></tr></table></figure>
+
+<h3 id="帮助"><a href="#帮助" class="headerlink" title="帮助"></a>帮助</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">?:打开帮助页面</span><br></pre></td></tr></table></figure>]]></content>
+  </entry>
+  <entry>
+    <title>Vim学习”</title>
+    <url>/2021/02/25/Vim%E5%AD%A6%E4%B9%A0%E2%80%9D/</url>
+    <content><![CDATA[<h2 id="第一级-存活"><a href="#第一级-存活" class="headerlink" title="第一级 - 存活"></a>第一级 - 存活</h2><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>命令详情</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>i</code></td>
+<td>Insert 模式，按 <code>esc</code> 回到 Normal 模式</td>
+</tr>
+<tr>
+<td><code>x</code></td>
+<td>删除当前光标所在的一个字符</td>
+</tr>
+<tr>
+<td><code>:wq</code></td>
+<td>存盘 + 退出</td>
+</tr>
+<tr>
+<td><code>dd</code></td>
+<td>删除当前行，并把当前行存到剪贴板里</td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td>粘贴剪贴板</td>
+</tr>
+<tr>
+<td><code>:help &lt;command&gt;</code></td>
+<td>显示相关命令帮助，退出帮助需要输入 <code>:q</code></td>
+</tr>
+</tbody></table>
+<p>在 VIM 的 Normal 模式下，所有的键都是功能键。不清楚自己在什么模式下，就多按几下<code>ecs</code></p>
+<h2 id="第二级-感觉良好"><a href="#第二级-感觉良好" class="headerlink" title="第二级 - 感觉良好"></a>第二级 - 感觉良好</h2><h4 id="各种插入模式"><a href="#各种插入模式" class="headerlink" title="各种插入模式"></a>各种插入模式</h4><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>命令详情</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>a</code></td>
+<td>在光标后插入</td>
+</tr>
+<tr>
+<td><code>o</code></td>
+<td>在当前行后插入一个新行</td>
+</tr>
+<tr>
+<td><code>O</code></td>
+<td>在当前行插入一个新行</td>
+</tr>
+<tr>
+<td><code>cw</code></td>
+<td>替换从光标所在位置后到一个单次结尾的字符</td>
+</tr>
+</tbody></table>
+<h4 id="简单的移动光标"><a href="#简单的移动光标" class="headerlink" title="简单的移动光标"></a>简单的移动光标</h4><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>命令详情</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>0</code></td>
+<td>数字零，到行头</td>
+</tr>
+<tr>
+<td><code> ^</code></td>
+<td>到本行第一个不是 blank 字符的位置</td>
+</tr>
+<tr>
+<td><code>$</code></td>
+<td>到本行行尾</td>
+</tr>
+<tr>
+<td><code>g_</code></td>
+<td>到本行最后一个不是 blank 字符的位置</td>
+</tr>
+<tr>
+<td><code>/pattern</code></td>
+<td>搜索 <code>pattern</code>  的字符串，如有多个匹配，按 <code>n</code> 键到下一个</td>
+</tr>
+</tbody></table>
+<p>所谓 blank 字符就是空格，tab，换行，回车等</p>
+<h4 id="拷贝／粘贴"><a href="#拷贝／粘贴" class="headerlink" title="拷贝／粘贴"></a>拷贝／粘贴</h4><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>命令详情</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>p</code></td>
+<td>粘贴</td>
+</tr>
+<tr>
+<td><code>yy</code></td>
+<td>拷贝到当前行，相当于 <code>ddp</code></td>
+</tr>
+</tbody></table>
+<h4 id="Undo／Redo"><a href="#Undo／Redo" class="headerlink" title="Undo／Redo"></a>Undo／Redo</h4><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>命令详情</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>u</code></td>
+<td>undo</td>
+</tr>
+<tr>
+<td><code>&lt;C-r&gt;</code></td>
+<td>redo</td>
+</tr>
+</tbody></table>
+<h4 id="打开／保存／退出／改变文件"><a href="#打开／保存／退出／改变文件" class="headerlink" title="打开／保存／退出／改变文件"></a>打开／保存／退出／改变文件</h4><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>命令详情</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>:e &lt;path/to/file&gt;</code></td>
+<td>打开一个文件</td>
+</tr>
+<tr>
+<td><code>:w</code></td>
+<td>存盘</td>
+</tr>
+<tr>
+<td><code>:saveas &lt;path/to/file&gt;</code></td>
+<td>另存为 <code>&lt;path/to/file&gt;</code></td>
+</tr>
+<tr>
+<td><code>:x</code> 或 <code>ZZ</code>  或 <code>:wq</code></td>
+<td>保存并退出，<code>:x</code> 表示仅在需要时保存，ZZ 不需要输入冒号并回车</td>
+</tr>
+<tr>
+<td><code>:q!</code></td>
+<td>退出不保存，<code>:q!</code>  强行退出所有正在编辑的文件，就算别的文件有更改</td>
+</tr>
+<tr>
+<td><code>:bn</code> 或 <code>:bp</code></td>
+<td>可以同时打开很多文件，使用这两个文件来切换上一个或下一个文件（:n 比较好使）</td>
+</tr>
+</tbody></table>
+<h4 id="第三级-更好、更快、更强"><a href="#第三级-更好、更快、更强" class="headerlink" title="第三级 - 更好、更快、更强"></a>第三级 - 更好、更快、更强</h4><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>命令详情</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>.</code></td>
+<td>可以重复上一次的命令</td>
+</tr>
+<tr>
+<td><code>N&lt;command&gt;</code></td>
+<td>重复某个命令 N 次</td>
+</tr>
+<tr>
+<td>N<code>G</code></td>
+<td>到第 N 行</td>
+</tr>
+<tr>
+<td><code>gg</code></td>
+<td>到第一行</td>
+</tr>
+<tr>
+<td><code>G</code></td>
+<td>到最后一行</td>
+</tr>
+<tr>
+<td><code>%</code></td>
+<td>匹配括号移动，包括 <code>(</code>，<code>&#123;</code>，<code>[</code> 。需要吧光标先移动到括号上</td>
+</tr>
+<tr>
+<td><code>*</code> 和 <code>#</code></td>
+<td>匹配光标当前所在的单词，移动光标到上一个或下一个</td>
+</tr>
+<tr>
+<td><code>w</code></td>
+<td>到下一个功能的开头</td>
+</tr>
+<tr>
+<td><code>e</code></td>
+<td>到下一个单词的结尾</td>
+</tr>
+</tbody></table>
+<ol>
+<li>如果你认为单词是默认的方式，那么就用小写的 w 和 e。默认上来说，一个单词由字母，数字和下划线组成。（程序变量）</li>
+<li>如果你认为单词是由 blank 字符分隔，那么你需要大写的 E 和 W。（程序语句）</li>
+</ol>
+<p>你一定要记住光标的移动，因为很多命令都可以和这些移动光标的命令连用。很多命令都可以如下来干：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;start position&gt;&lt;command&gt;&lt;end position&gt;</span><br></pre></td></tr></table></figure>
+<p>例如 <code>0y$</code> 命令意味着：</p>
+<ol>
+<li><code>0</code> 先到行头</li>
+<li><code>y</code> 从这里开始拷贝</li>
+<li><code>$</code> 拷贝到本行最后一个字符</li>
+</ol>
+<p>例如 <code>ye</code> 从当前位置拷贝到本单词的最后一个字符。<br>例如 <code>y2/foo</code> 来拷贝两个“foo”之间的字符串。<br>还有很多事件不一定要你按 <code>y</code> 才会拷贝，下面的命令也会被拷贝：</p>
+<table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>命令详情</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>d</code></td>
+<td>删除</td>
+</tr>
+<tr>
+<td><code>v</code></td>
+<td>可视化的选择</td>
+</tr>
+<tr>
+<td><code>gU</code></td>
+<td>变大写</td>
+</tr>
+<tr>
+<td><code>gu</code></td>
+<td>变小写</td>
+</tr>
+<tr>
+<td><code>...</code></td>
+<td>等等</td>
+</tr>
+</tbody></table>
+<p>可视化选择是一个很有意思的命令，你可以先按 <code>v</code> 然后移动光标，你就会看到文本被选择，然后你可以 <code>d</code> 也可 <code>y</code> ，也可以变大写等。</p>
+<h2 id="第四级-Vim-超能力"><a href="#第四级-Vim-超能力" class="headerlink" title="第四级 - Vim 超能力"></a>第四级 - Vim 超能力</h2><h4 id="在当前行上移动光标"><a href="#在当前行上移动光标" class="headerlink" title="在当前行上移动光标"></a>在当前行上移动光标</h4><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>命令详情</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>0</code></td>
+<td>到行头</td>
+</tr>
+<tr>
+<td><code>^</code></td>
+<td>到本行的第一个非 blank 字符的位置</td>
+</tr>
+<tr>
+<td><code>$</code></td>
+<td>到行尾</td>
+</tr>
+<tr>
+<td><code>g_</code></td>
+<td>到本行最后一个非 blank 字符的位置</td>
+</tr>
+<tr>
+<td><code>fa</code></td>
+<td>到下一个为 a 的字符处，a可以改变为其他字符</td>
+</tr>
+<tr>
+<td><code>t,</code></td>
+<td>到，前的第一个字符，逗号可以变为其他字符</td>
+</tr>
+<tr>
+<td><code>3fa</code></td>
+<td>在当前行查找第三个出现的 a</td>
+</tr>
+<tr>
+<td><code>dt&quot;</code></td>
+<td>删除所有内容，直到遇到双引号</td>
+</tr>
+</tbody></table>
+<p><code>F</code> 和 <code>T</code> ；<code>f</code> 和 <code>t</code> 一样，只不过是相反方向。</p>
+<h4 id="区块选择"><a href="#区块选择" class="headerlink" title="区块选择"></a>区块选择</h4><p>在 visual 模式下，这些命令很强大，其命令格式为：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;action&gt;a&lt;object&gt; 和 &lt;action&gt;i&lt;object&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>action 可以是任何命令，如 <code>d</code> （删除）， <code>y</code> （拷贝），<code>v</code> （可见视图式选择）</li>
+<li>object 可能是：<code>w</code> 一个单词，<code>W</code> 一个以空格为分隔的单词，<code>s</code> 一个句子，<code>p</code> 一个段落。也可以是一个特别的字符：<code>&quot;</code>、 <code>&#39;</code>、 <code>)</code>、 <code>&#125;</code>、 <code>]</code>。</li>
+</ul>
+<p>假设你有一个字符串 (map (+) (“foo”)).而光标键在第一个 o 的位置。</p>
+<table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>命令详情</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>vi&quot;</code></td>
+<td>选择 foo</td>
+</tr>
+<tr>
+<td><code>va&quot;</code></td>
+<td>选择 “foo”</td>
+</tr>
+<tr>
+<td><code>vi)</code></td>
+<td>选择 “foo”</td>
+</tr>
+<tr>
+<td><code>va)</code></td>
+<td>选择 (“foo”)</td>
+</tr>
+<tr>
+<td><code>v2i)</code></td>
+<td>选择 map (+) (“foo”)</td>
+</tr>
+<tr>
+<td><code>v2a)</code></td>
+<td>选择 map (+) (“foo”)</td>
+</tr>
+</tbody></table>
+<h4 id="块操作"><a href="#块操作" class="headerlink" title="块操作"></a>块操作</h4><p>典型操作：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">0 &lt;C-v&gt; &lt;C-d&gt; I-- [ESC]</span><br></pre></td></tr></table></figure>
+<p>操作流程解析：</p>
+<table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>命令详情</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>^</code></td>
+<td>到行头</td>
+</tr>
+<tr>
+<td><code>&lt;C-v&gt;</code></td>
+<td>开始块操作</td>
+</tr>
+<tr>
+<td><code>&lt;C-d&gt;</code></td>
+<td>向下移动（也可以是 <code>hjkl</code> 来移动光标，也可以使用 <code>%</code>  ）</td>
+</tr>
+<tr>
+<td><code>I-- [ESC]</code></td>
+<td>I 是插入，插入 <code>-- </code> ，按 <code>ECS</code>键</td>
+</tr>
+</tbody></table>
+<h4 id="分屏操作"><a href="#分屏操作" class="headerlink" title="分屏操作"></a>分屏操作</h4><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>命令详情</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>:vs</code></td>
+<td>横向分屏</td>
+</tr>
+<tr>
+<td><code>:sp</code></td>
+<td>纵向分屏</td>
+</tr>
+</tbody></table>
 ]]></content>
   </entry>
   <entry>
