@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hello World</title>
+    <url>/2021/02/24/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Centos7 - 初始化服务器</title>
+    <url>/2021/02/24/centos7-init/</url>
+    <content><![CDATA[<p>@(610 - Linux)</p>
+<h3 id="修改时间"><a href="#修改时间" class="headerlink" title="修改时间"></a>修改时间</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查看当前时间</span></span><br><span class="line">date <span class="string">&quot;+%Y-%m-%d %H:%M:%S&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 手动设置时间</span></span><br><span class="line">date -s <span class="string">&quot;20210101 00:00:00&quot;</span> </span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<h3 id="更改密码"><a href="#更改密码" class="headerlink" title="更改密码"></a>更改密码</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">passwd</span><br></pre></td></tr></table></figure>
+<h3 id="更改ssh端口号"><a href="#更改ssh端口号" class="headerlink" title="更改ssh端口号"></a>更改ssh端口号</h3><p>确认当前ssh端口号</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">netstat -nlpt | grep ssh</span><br></pre></td></tr></table></figure>
+<p>更改ssh配置文件，并重启ssh服务</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vi /etc/ssh/sshd_config</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启ssh服务</span></span><br><span class="line">systemctl restart sshd.service</span><br></pre></td></tr></table></figure>
+<h3 id="yum更换国内源"><a href="#yum更换国内源" class="headerlink" title="yum更换国内源"></a>yum更换国内源</h3><p>安装或更新wget，防止命令未安装</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install wget -y</span><br></pre></td></tr></table></figure>
+<p>备份默认yum源，并下载阿里源，更新缓存后进行系统更新操作</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 备份默认yum源</span></span><br><span class="line">mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup</span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载并替换yum源</span></span><br><span class="line">wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo</span><br><span class="line"></span><br><span class="line"><span class="comment"># 更新yum缓存</span></span><br><span class="line">yum makecache</span><br><span class="line"></span><br><span class="line"><span class="comment"># 更新系统</span></span><br><span class="line">yum update -y</span><br></pre></td></tr></table></figure>
+<h3 id="安装Glances"><a href="#安装Glances" class="headerlink" title="安装Glances"></a>安装Glances</h3><p>Glances是一款简单大气的命令行性能监控软件，top工具替代品</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y glances</span><br></pre></td></tr></table></figure>
+<h3 id="安装Docker"><a href="#安装Docker" class="headerlink" title="安装Docker"></a>安装Docker</h3><p>清除可能存在的Docker安装包或遗留包</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 清除可能存在的Docker安装包或遗留包</span></span><br><span class="line">sudo yum remove docker \</span><br><span class="line">                docker-client \</span><br><span class="line">                docker-client-latest \</span><br><span class="line">                docker-common \</span><br><span class="line">                docker-latest \</span><br><span class="line">                docker-latest-logrotate \</span><br><span class="line">                docker-logrotate \</span><br><span class="line">                docker-engine</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo yum install -y yum-utils \</span><br><span class="line">                    device-mapper-persistent-data \</span><br><span class="line">                    lvm2</span><br></pre></td></tr></table></figure>
+
+<p>执行安装</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 添加yum的Docker源</span></span><br><span class="line">sudo yum-config-manager \</span><br><span class="line">     --add-repo https://download.docker.com/linux/centos/docker-ce.repo</span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行Docker安装</span></span><br><span class="line">sudo yum install -y docker-ce \</span><br><span class="line">                    docker-ce-cli \</span><br><span class="line">                    containerd.io</span><br><span class="line"></span><br><span class="line"><span class="comment"># 启动Docker服务</span></span><br><span class="line">sudo systemctl start docker</span><br><span class="line"></span><br><span class="line"><span class="comment"># 运行测试镜像</span></span><br><span class="line">sudo docker run hello-world</span><br><span class="line"></span><br><span class="line"><span class="comment"># 移除测试镜像</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="Java安装"><a href="#Java安装" class="headerlink" title="Java安装"></a>Java安装</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 检查本机是否安装了openjdk</span></span><br><span class="line">rpm -qa|grep openjdk -i</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建文件夹</span></span><br><span class="line">mkdir /usr/java</span><br><span class="line">mkdir /home/software</span><br><span class="line"></span><br><span class="line"><span class="comment"># 上传文件并解压</span></span><br><span class="line"><span class="built_in">cd</span> /home/software</span><br><span class="line">tar -zxvf jdk-8u191-linux-x64.tar.gz</span><br><span class="line">mv jdk1.8/ /usr/java/</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加环境变量</span></span><br><span class="line">vim /etc/profile</span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=/usr/java/jdk1.8</span><br><span class="line"><span class="built_in">export</span> CLASSPATH=.:%JAVA_HOME%/lib/dt.jar:%JAVA_HOME%/lib/tools.jar  </span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$JAVA_HOME</span>/bin</span><br><span class="line"></span><br><span class="line"><span class="comment"># 刷新环境变量</span></span><br><span class="line"><span class="built_in">source</span> /etc/profile</span><br></pre></td></tr></table></figure>
+
+<h3 id="Nvm安装"><a href="#Nvm安装" class="headerlink" title="Nvm安装"></a>Nvm安装</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 获取install.sh文件并执行</span></span><br><span class="line">wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash</span><br><span class="line">curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash</span><br><span class="line"></span><br><span class="line"><span class="comment"># 刷新环境变量</span></span><br><span class="line"><span class="built_in">source</span> ~/.bash_profile</span><br><span class="line"></span><br><span class="line"><span class="comment"># 检查是否正确安装</span></span><br><span class="line">nvm --version</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看nvm安装列表进行node.js安装</span></span><br><span class="line">nvm list-remote</span><br><span class="line">nvm install v12.20.1</span><br><span class="line">nvm install v14.15.4</span><br><span class="line"></span><br><span class="line"><span class="comment"># 切换node.js版本并设置默认版本</span></span><br><span class="line">nvm list</span><br><span class="line">nvm use v12.20.1</span><br><span class="line">nvm use v14.15.4</span><br><span class="line">nvm <span class="built_in">alias</span> default v14.15.4</span><br><span class="line"></span><br><span class="line"><span class="comment">#检查node.js是否正确安装</span></span><br><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 安装yarn</span></span><br><span class="line">npm install yarn -g</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装cgr换源工具</span></span><br><span class="line">npm install -g cgr</span><br><span class="line"><span class="comment"># 测试仓库速度</span></span><br><span class="line">cgr <span class="built_in">test</span></span><br><span class="line"><span class="comment"># 国内使用淘宝源</span></span><br><span class="line">cgr use taobao</span><br></pre></td></tr></table></figure>
+
+<h3 id="清除History记录"><a href="#清除History记录" class="headerlink" title="清除History记录"></a>清除History记录</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 清除历史记录</span></span><br><span class="line"><span class="built_in">history</span> -c </span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Diary</category>
+        <category>PlayStation</category>
+        <category>Games</category>
+        <category>Life</category>
+      </categories>
+      <tags>
+        <tag>PS3</tag>
+        <tag>Games</tag>
+      </tags>
+  </entry>
+</search>
